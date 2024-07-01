@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="base/global.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <aside class="container__menu">
+    <section class="container__profile">
+      <img class="profile--image" src="images/avatar.png" alt="" />
+      <h1 class="profile--title">Capivara da Silva</h1>
+      <h2 class="profile--subtitle">Desenvolvedora de Software</h2>
+
+      <div class="profile__social-media">
+        <img src="icons/in.svg" alt="" />
+        <img src="icons/gb.svg" alt="" />
+        <img src="icons/em.svg" alt="" />
+      </div> 
+    </section>
+
+    <nav>
+
+      <ul class="nav__list">
+        <li class="nav__list-item menu__item">
+          <span class="icon"><img class="nav__svg-width" src="icons/layout.svg" alt="" /></span>
+          <span class="txt__link"> <a class="nav__link" href="#">Dashboard</a></span>
+        </li>
+
+        <li class="nav__list-item menu__item">
+          <span class="icon"><img class="nav__svg-width" src="icons/to-do.svg" alt="" /></span>
+          <span class="txt__link"> <a class="nav__link" href="index.html">To-do</a></span>
+        </li>
+
+        <li class="nav__list-item menu__item">
+          <span class="icon"><img class="nav__svg-width" src="icons/pencil.svg" alt="" /></span>
+          <span class="txt__link"><a class="nav__link" href="snippets.html">Códigos</a></span>
+        </li>
+
+        <li class="nav__list-item menu__item">
+          <span class="icon"><img class="nav__svg-width" src="icons/cloud.svg" alt="" /></span>
+          <span class="txt__link"><a class="nav__link" href="objetivos.html">Objetivos</a></span>
+        </li>
+
+        <li class="nav__list-item menu__item">
+          <img class="nav__svg-width" src="icons/lightning.svg" alt="" />
+          <span class="txt__link"><a class="nav__link" href="#">Ideias</a></span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container__buttons-mode">
+      <button class="button-mode button-mode--light">
+        <img src="icons/sun.svg" alt="" />
+      </button>
+      <button class="button-mode button-mode--dark">
+        <img src="icons/moon.svg" alt="" />
+      </button>
+    </div>
+
+    <p class="container__menu--text-bottom">© 2024 | Desenvolvido no programa Alura Boost com Grupo Mateus por Capivara da Silva | Todos os direitos reservados.</p>
+  </aside>
+
+  <div class="container__desktop">
+    <form class="form" id="objetivoForm">
+      <div class="form__info--row">
+        <fieldset class="form__info--column">
+          <label for="tituloObjetivo">Título</label>
+          <input type="text" id="tituloObjetivo" placeholder="Título" class="container__input" data-input>
+          <label for="categoriaObjetivo">Categoria</label>
+          <input type="text" class="container__input" id="categoriaObjetivo" placeholder="Categoria" data-input>
+
+        </fieldset>
+
+        <fieldset class="form__info--column">
+          <label for="statusObjetivo">Status</label>
+          <select class="container__input" id="statusObjetivo" required>
+            <option value="Iniciar">Iniciar</option>
+            <option value="Andamento">Andamento</option>
+            <option value="Concluído">Concluído</option>
+          </select>
+        </fieldset>
+
+        <label for="imagemObjetivo" class="inputImagem">Escolha uma imagem</label>
+        <input type="file" id="imagemObjetivo" data-input>
+
+      </div>
+
+      <fieldset class="form__info--column container__textarea">
+        <label for="descricaoObjetivo">Descrição</label>
+        <textarea
+          placeholder="Oficina XYZ para revisão completa e relatar barulho estranho na embreagem."
+          class="container__input container__input--textarea"
+          id="descricaoObjetivo"
+          maxlength="100"
+        ></textarea>
+      </fieldset>
+
+      <button class="form__button form__button--dark" id="addButton">Adicionar</button>
+    </form>
+
+    <ul id="objetivosItens" class="container__objetivos"></ul>
+  </div>
+
+  
+
+  <script src="js/modules/criarElementoObjetivo.js" type="module"></script>
+</body>
+</html>

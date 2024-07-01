@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="base/global.css" />
+  </head>
+  <body>
+    <aside class="container__menu">
+      <section class="container__profile">
+        <img src="images/avatar.png" alt="" />
+        <h1 class="profile--title">Capivara da Silva</h1>
+        <h2 class="profile--subtitle">Desenvolvedora de Software</h2>
+
+        <div class="profile__social-media">
+          <img src="icons/in.svg" alt="" />
+          <img src="icons/gb.svg" alt="" />
+          <img src="icons/em.svg" alt="" />
+        </div> 
+      </section>
+
+      <nav>
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <img class="nav__svg-width" src="icons/layout.svg" alt="" />
+            <a class="nav__link" href="">Dashboard</a>
+          </li>
+          <li class="nav__list-item">
+            <img class="nav__svg-width" src="icons/to-do.svg" alt="" />
+            <a class="nav__link" href="index.html">To-do</a>
+          </li>
+          </li>
+          <li class="nav__list-item">
+            <img class="nav__svg-width" src="icons/pencil.svg" alt="" />
+            <a class="nav__link" href="snippets.html">Códigos</a>
+          </li>
+          <li class="nav__list-item">
+            <img class="nav__svg-width" src="icons/cloud.svg" alt="" />
+            <a class="nav__link" href="objetivos.html">Objetivos</a>
+          </li>
+          <li class="nav__list-item">
+            <img class="nav__svg-width" src="icons/lightning.svg" alt="" />
+            <a class="nav__link" href="">Ideias</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container__buttons-mode">
+        <button class="button-mode button-mode--light">
+          <img src="icons/sun.svg" alt="" />
+        </button>
+        <button class="button-mode button-mode--dark">
+          <img src="icons/moon.svg" alt="" />
+        </button>
+      </div>
+
+      <p class="container__menu--text-bottom">© 2024 | Desenvolvido no programa Alura Boost com Grupo Mateus por Capivara da Silva | Todos os direitos reservados.</p>
+    </aside>
+
+    <div class="container__desktop">
+      <form class="form" id="taskForm">
+        <div class="form__info--row">
+          <fieldset class="form__info--column">
+            <label for="title">Título</label>
+            <input type="text" placeholder="Levar o carro para revisão" class="container__input" id="title" minlength="3" maxlength="25" required />
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="priority">Prioridade</label>
+            <select class="container__input" id="priority" required></select>
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="category">Categoria</label>
+            <select class="container__input" id="category" required></select>
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="date">Data</label>
+            <input class="container__input" type="date" name="" id="date" />
+          </fieldset>
+        </div>
+
+        <fieldset class="form__info--column container__textarea">
+          <label for="description">Descrição</label>
+          <textarea
+            placeholder="Oficina XYZ para revisão completa e relatar barulho estranho na embreagem."
+            class="container__input container__input--textarea"
+            id="description"
+            maxlength="100"
+          ></textarea>
+        </fieldset>
+
+        <fieldset class="container__buttons">
+          <button class="form__button" id="clearButton" type="button">Limpar</button>
+          <button class="form__button form__button--dark" id="addButton">Adicionar</button>
+        </fieldset>
+      </form>
+
+      <main class="main__taskList">
+        <h2 class="main__taskList--title">Tarefas</h2>
+
+        <ul id="taskList" class="taskList">
+          <li class="taskList__task">
+            <div class="task__info--column">
+              <div class="task__info--row">
+                <div class="task__priority task__priority--medium">Média</div>
+                <div class="task__category">Família</div>
+                <div class="task__date">12/12/2012</div>
+              </div>
+              <div class="task__info--row">
+                <div class="task__title">Levar carro na revisão</div>
+                <div class="task__description">Oficina XYZ para revisão completa e falar do barulho estranho na embreagem.</div>
+              </div>
+            </div>
+            <div class="task__buttons">
+              <button class="task__delete" type="button">
+                <svg width="32" height="24" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_128)">
+                    <path d="M3.34131 6.33332H16.6746" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M8.34131 9.66665V14.6666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.6746 9.66665V14.6666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M4.17456 6.33332L5.00789 16.3333C5.00789 16.7753 5.18349 17.1993 5.49605 17.5118C5.80861 17.8244 6.23253 18 6.67456 18H13.3412C13.7833 18 14.2072 17.8244 14.5197 17.5118C14.8323 17.1993 15.0079 16.7753 15.0079 16.3333L15.8412 6.33332"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.50793 6.33332V3.83332C7.50793 3.6123 7.59573 3.40034 7.75201 3.24406C7.90829 3.08778 8.12025 2.99998 8.34127 2.99998H11.6746C11.8956 2.99998 12.1076 3.08778 12.2639 3.24406C12.4201 3.40034 12.5079 3.6123 12.5079 3.83332V6.33332"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_128">
+                      <rect width="20" height="20" fill="white" transform="translate(0.00793457 0.499985)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
